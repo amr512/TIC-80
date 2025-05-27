@@ -27,7 +27,7 @@ jobs:
           cmake --build . --config %BUILD_TYPE% --parallel
 
       - name: Deploy
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "tic80-windows-pro"
           path: build/bin/tic80.exe
@@ -49,7 +49,7 @@ jobs:
           cp windir/* win
 
       - name: Deploy
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "tic80-export"
           path: |
@@ -75,7 +75,7 @@ jobs:
           cp windir/tic80${{ matrix.script }}.exe win${{ matrix.script }}
 
       - name: Deploy
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "tic80-export"
           path: |
